@@ -4,18 +4,15 @@
  * @param {number} [width=depth] 
  * @returns {string}
  */
-function nestedForLoops (depth, width = depth) {
+function nestedForLoops(depth, width = depth) {
   let result = "\n";
 
-  for (var i = 0; i < depth; i++){
-    
-    for (var j = 0; j < width; j++){
-      
-      if (j !== width - 1) result += '{x:' + j + ', ' + 'y:' + i + '}, ';
-      if (j === width - 1) result += '{x:' + j + ', ' + 'y:' + i + '}';
-      
-      } 
-    
+  for (var i = 0; i < depth; i++) {
+    for (var j = 0; j < width; j++) {
+      if (j !== width - 1) { result += '{x:' + j + ', ' + 'y:' + i + '}, ' };
+      if (j === width - 1) { result += '{x:' + j + ', ' + 'y:' + i + '}' };
+    }
+
     result += '\n'
   }
   return result;
